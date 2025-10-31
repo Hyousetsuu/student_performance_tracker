@@ -1,15 +1,16 @@
 # 🎓 Student Performance Tracker
 
-Proyek Python berbasis **Object-Oriented Programming (OOP)** dan **Modularisasi**.
+Proyek Python berbasis **OOP (Object-Oriented Programming)** dan **Modularisasi**.
 
 ## ✨ Fitur Utama
-- Tambah dan kelola data mahasiswa
+- Tambah & kelola data mahasiswa
 - Validasi kehadiran (0–100%)
-- Hitung nilai akhir berbobot (Quiz 15%, Tugas 25%, UTS 25%, UAS 35%)
+- Hitung nilai akhir berbobot
 - Predikat otomatis (A–E)
-- Laporan Markdown (`report.md`)
-- Laporan HTML berwarna (`report.html`)
-- Filter mahasiswa dengan nilai < 70
+- Muat data otomatis dari CSV
+- Laporan Markdown & HTML
+- Filter mahasiswa nilai < 70
+- Bisa dijalankan via `python -m tracker`
 
 ## 🚀 Cara Menjalankan
 ```bash
