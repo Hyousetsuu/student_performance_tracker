@@ -1,20 +1,71 @@
 class Penilaian:
     """
     Menyimpan nilai quiz, tugas, UTS, dan UAS.
-    Memiliki metode untuk menghitung nilai akhir berbobot.
+    Memiliki property dengan validasi untuk nilai 0–100.
     """
 
     def __init__(self, quiz=0, tugas=0, uts=0, uas=0):
-        self.quiz = self._validate(quiz)
-        self.tugas = self._validate(tugas)
-        self.uts = self._validate(uts)
-        self.uas = self._validate(uas)
+        # gunakan property agar otomatis lewat setter
+        self.quiz = quiz
+        self.tugas = tugas
+        self.uts = uts
+        self.uas = uas
 
-    def _validate(self, nilai):
-        if not (0 <= nilai <= 100):
-            raise ValueError("Nilai harus antara 0–100.")
-        return nilai
+    # -----------------------------
+    # Property: QUIZ
+    # -----------------------------
+    @property
+    def quiz(self):
+        return self._quiz
 
+    @quiz.setter
+    def quiz(self, value):
+        if not (0 <= value <= 100):
+            raise ValueError("Nilai Quiz harus antara 0–100.")
+        self._quiz = value
+
+    # -----------------------------
+    # Property: TUGAS
+    # -----------------------------
+    @property
+    def tugas(self):
+        return self._tugas
+
+    @tugas.setter
+    def tugas(self, value):
+        if not (0 <= value <= 100):
+            raise ValueError("Nilai Tugas harus antara 0–100.")
+        self._tugas = value
+
+    # -----------------------------
+    # Property: UTS
+    # -----------------------------
+    @property
+    def uts(self):
+        return self._uts
+
+    @uts.setter
+    def uts(self, value):
+        if not (0 <= value <= 100):
+            raise ValueError("Nilai UTS harus antara 0–100.")
+        self._uts = value
+
+    # -----------------------------
+    # Property: UAS
+    # -----------------------------
+    @property
+    def uas(self):
+        return self._uas
+
+    @uas.setter
+    def uas(self, value):
+        if not (0 <= value <= 100):
+            raise ValueError("Nilai UAS harus antara 0–100.")
+        self._uas = value
+
+    # -----------------------------
+    # METHOD: Hitung Nilai Akhir
+    # -----------------------------
     def nilai_akhir(self):
         """Hitung nilai akhir berbobot"""
         return (
