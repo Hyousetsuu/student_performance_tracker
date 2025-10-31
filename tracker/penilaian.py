@@ -5,15 +5,11 @@ class Penilaian:
     """
 
     def __init__(self, quiz=0, tugas=0, uts=0, uas=0):
-        # gunakan property agar otomatis lewat setter
         self.quiz = quiz
         self.tugas = tugas
         self.uts = uts
         self.uas = uas
 
-    # -----------------------------
-    # Property: QUIZ
-    # -----------------------------
     @property
     def quiz(self):
         return self._quiz
@@ -24,9 +20,6 @@ class Penilaian:
             raise ValueError("Nilai Quiz harus antara 0–100.")
         self._quiz = value
 
-    # -----------------------------
-    # Property: TUGAS
-    # -----------------------------
     @property
     def tugas(self):
         return self._tugas
@@ -37,9 +30,6 @@ class Penilaian:
             raise ValueError("Nilai Tugas harus antara 0–100.")
         self._tugas = value
 
-    # -----------------------------
-    # Property: UTS
-    # -----------------------------
     @property
     def uts(self):
         return self._uts
@@ -50,9 +40,6 @@ class Penilaian:
             raise ValueError("Nilai UTS harus antara 0–100.")
         self._uts = value
 
-    # -----------------------------
-    # Property: UAS
-    # -----------------------------
     @property
     def uas(self):
         return self._uas
@@ -63,9 +50,6 @@ class Penilaian:
             raise ValueError("Nilai UAS harus antara 0–100.")
         self._uas = value
 
-    # -----------------------------
-    # METHOD: Hitung Nilai Akhir
-    # -----------------------------
     def nilai_akhir(self):
         """Hitung nilai akhir berbobot"""
         return (
