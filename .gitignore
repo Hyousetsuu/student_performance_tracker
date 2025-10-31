@@ -1,0 +1,10 @@
+# Abaikan virtual environment
+.venv/
+venv/
+
+# Abaikan file Python yang tidak perlu
+__pycache__/
+*.pyc
+
+# Abaikan file VSCode
+.vscode/
